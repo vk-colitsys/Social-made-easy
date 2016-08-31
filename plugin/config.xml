@@ -1,0 +1,39 @@
+<plugin>
+    <name>SocialBookmarks</name>
+    <package>SocialBookmarks</package>
+    <version>1.2</version>
+    <provider>Megan Garrison</provider>
+    <providerURL>http://socialbookmarks.riaforge.org/</providerURL>
+    <category>Social Media</category>
+    <settings>
+        <setting>
+            <name>iconSize</name>
+            <label>Choose Icon Size:</label>
+            <hint>Icon Size in pixels</hint>
+            <type>select</type>
+            <required>true</required>
+            <validation></validation>
+            <regex></regex>
+            <message></message>
+            <defaultvalue>48x48</defaultvalue>
+            <optionlist>16x16^24x24^48x48^60x60</optionlist>
+            <optionlabellist></optionlabellist>
+        </setting>
+	<setting>
+            <name>portalShow</name>
+            <label>Show on Portal Pages?</label>
+            <hint>Do you want to display on Portals?</hint>
+            <type>select</type>
+            <required>true</required>
+            <validation></validation>
+            <regex></regex>
+            <message></message>
+            <defaultvalue>0</defaultvalue>
+            <optionlist>0^1</optionlist>
+            <optionlabellist>No^Yes</optionlabellist>
+        </setting>
+    </settings>
+    <displayobjects location="global">
+	<displayobject name="Social Bookmarks (cfc)" displaymethod="renderSocial" component="displayObjects.renderSocial" persist="false" />
+    </displayobjects>
+</plugin>
